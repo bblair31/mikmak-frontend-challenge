@@ -22,8 +22,15 @@ body {
 }
 
 .app-counter-buttons button {
-  font-size: 24px;
+  font-size: 22px;
   margin: 0 8px;
   -webkit-appearance: none;
   width: 120px;
+  background: #f3f3f3;
+  border: 1px solid #d8d8d8;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px #00000014;
+  background: linear-gradient(135deg,#00a9bc,#00b5bf 69%,#00bfbd);
+  color: #fff;
+  text-align: center;
 }
