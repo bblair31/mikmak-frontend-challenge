@@ -25,14 +25,14 @@
           };
         },
         increment() {
-          this.setState({number: this.state.number + 1});
+          this.setState(prevState => ({number: prevState.number + prevState.number}));
         },
         render() {
           return (
             <div>
               <h1 className="app-title">{ this.state.title }</h1>
               <div className="app-current-count">
-                { this.state.count }
+                { this.state.number }
               </div>
               <div className="app-counter-buttons">
                 <button type="button" name="increment" onClick={this.increment}>+</button>
