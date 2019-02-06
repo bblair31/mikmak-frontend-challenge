@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>React Counter</title>
+    <title>React Fibonacci</title>
 
     <script src="../lib/react.js"></script>
     <script src="../lib/react-dom.js"></script>
@@ -17,11 +17,11 @@
     <div id="app"></div>
 
     <script type="text/babel">
-      var Counter = React.createClass({
+      const Fibonacci = React.createClass({
         getInitialState() {
           return {
             count: 0,
-            title: 'React Counter'
+            title: 'React Fibonacci'
           };
         },
         increment() {
@@ -46,7 +46,7 @@
         }
         });
 
-        ReactDOM.render(<Counter />, document.getElementById('app'));
+        ReactDOM.render(<Fibonacci />, document.getElementById('app'));
 
       </script>
 
