@@ -1,6 +1,7 @@
 body {
   font-family: "Arial", sans-serif;
   text-align: center;
+  background: #f1f1f169
 }
 
 .app-title {
@@ -15,6 +16,10 @@ body {
   display: inline-block;
   font-size: 48px;
   padding: 12px 24px;
+  font-family: sans-serif;
+  color: #00bfbd;
+  text-align: center;
+  font-weight: 400;
 }
 
 .app-counter-buttons {
@@ -23,6 +28,8 @@ body {
 
 .app-counter-buttons button {
   font-size: 22px;
+  font-weight: lighter;
+  text-align: center;
   margin: 0 8px;
   -webkit-appearance: none;
   width: 120px;
@@ -32,5 +39,5 @@ body {
   box-shadow: 0 2px 2px #00000014;
   background: linear-gradient(135deg,#00a9bc,#00b5bf 69%,#00bfbd);
   color: #fff;
-  text-align: center;
+  cursor: pointer;
 }
