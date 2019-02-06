@@ -26,6 +26,7 @@
           };
         },
         increment() {
+          // Use previous state and the number from two iterations ago stored in state to set next number and secondPrevNum.
           this.setState(prevState => (
             {
               number: prevState.number + this.state.secondPrevNum,
