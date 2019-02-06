@@ -21,11 +21,17 @@
         getInitialState() {
           return {
             number: 1,
+            secondPrevNum: 0,
             title: 'React Fibonacci'
           };
         },
         increment() {
-          this.setState(prevState => ({number: prevState.number + prevState.number}));
+          this.setState(prevState => (
+            {
+              number: prevState.number + this.state.secondPrevNum,
+              secondPrevNum: prevState.number
+            }
+          ));
         },
         render() {
           return (
