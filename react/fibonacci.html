@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>React Fibonacci</title>
+
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script src="../lib/babel.min.js"></script>
+
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+
+  <body>
+
+    <div id="app"></div>
+
+    <script type="text/babel">
+      const Fibonacci = React.createClass({
+        getInitialState() {
+          return {
+            number: 1,
+            secondPrevNum: 0,
+            title: 'React Fibonacci'
+          };
+        },
+        increment() {
+          // Use previous state and the number from two iterations ago stored in state to set next number and secondPrevNum.
+          this.setState(prevState => (
+            {
+              number: prevState.number + this.state.secondPrevNum,
+              secondPrevNum: prevState.number
+            }
+          ));
+        },
+        render() {
+          return (
+            <div>
+              <h1 className="app-title">{ this.state.title }</h1>
+              <div className="app-current-count">
+                { this.state.number }
+              </div>
+              <div className="app-counter-buttons">
+                <button type="button" name="next-number" onClick={this.increment}>next number</button>
+              </div>
+            </div>
+          );
+        }
+        });
+
+        ReactDOM.render(<Fibonacci />, document.getElementById('app'));
+
+      </script>
+
+  </body>
+</html>
